@@ -149,6 +149,7 @@ const config = {
   transform: {
     "^.+\\.[jt]sx?$": "babel-jest",
   },
+  
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
 

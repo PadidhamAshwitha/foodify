@@ -1,7 +1,7 @@
-export const Sum = (a,b) => {
+const Sum = (a,b) => {
     
     return a+b;
 };
 
-//module.exports = {Sum};
+module.exports = {Sum};
 //export default Sum;

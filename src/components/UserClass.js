@@ -1,5 +1,6 @@
 import React from "react";
-import { GITHUB_URL } from "../utilities/constants";
+import { GITHUB_URL, LINKEDIN_URL } from "../utilities/constants";
+import { AVATAR_URL } from "../utilities/constants";
 
 class UserClass extends React.Component{
     constructor(props){
@@ -52,9 +53,18 @@ class UserClass extends React.Component{
                         }
                     );
                 }}>Increment count</button>
-                <h2>name: {name}</h2>
-                <h3>location: {location}</h3>
-                <h3>contact: ashwithapadidham17</h3>
+                <div className="flex justify-evenly">
+                    <div className="p-2 m-2 w-4/12">
+                        <img src={AVATAR_URL} />
+                    </div>
+                    <div className="p-2 m-2 w-4/12 font-bold">
+                    <ul>
+                        <li>Name: {name}</li>
+                        <li>Location: {location}</li>
+                        <li>Contact me at : ashwithapadidham17@gmail.com</li>
+                    </ul>
+                    </div>
+                </div>
             </div>
         );
     };

@@ -8,9 +8,11 @@ const useFooter = () => {
     },[])
     const fetchData =async ()=>{
         console.log(RES_LIST_URL);
-        const data = await fetch("");
+        const data = await fetch("RES_LIST_URL");
+        const json = await data.json();
+        setFooterinfo(json.data.cards[10].card.card.cities);
     }
-    return (
-        console.log("footer")
-    )
+    return [footerInfo,setFooterinfo];
 }
+
+export default useFooter;

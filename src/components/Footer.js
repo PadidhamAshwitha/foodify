@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
-
+import useFooter from "../utilities/useFooter";
 const Footer = () =>{
-    const [footerInfo, setFooterinfo] = useState("");
 
-    useEffect( ()=>{
-        // const data= fetch()
-    }, [])
+    const [footerInfo, setFooterinfo] = useFooter();
     return(
         <div>
             footerInfo

@@ -7,3 +7,7 @@ export const RES_LIST_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat
 export const MENU_URL =  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.5366218&lng=78.4844811&restaurantId=";
 
 export const GITHUB_URL = "https://api.github.com/users/PadidhamAshwitha";
+
+export const AVATAR_URL = "https://avatars.githubusercontent.com/u/181178901?v=4";
+
+export const LINKEDIN_URL = "in/https://www.linkedin.com/in/padidhamashwitha/";

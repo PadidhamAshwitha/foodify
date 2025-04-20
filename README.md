@@ -72,5 +72,5 @@ two imports and exports
   - install babel dependencies
   - confugure bable
   - configure parcel configuration file to disable the default bable configuration transpilation
-  - jest configuration (npx jest init)
+  - jest configuration (npx jest --init)
   - install test-environment-jsdom

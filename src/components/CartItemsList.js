@@ -3,11 +3,23 @@ import { removeItem } from "../utilities/cartSlice";
 import { RES_IMG_URL } from "../utilities/constants";
 
 const CartItemsList = ({items}) =>{
+
+    const output = items.map((item) => 
+        item.card.info.defaultPrice ? item.card.info.defaultPrice / 100 : item.card.info.price / 100
+        )
+    
+    const calculateTotalCost = (output) => {
+        const total = output.reduce((acc, curr) => {
+            acc = acc + curr;
+            return acc;
+        }, 0);
+        return total;
+    }
+
     const dispatch = useDispatch();
     const handleRemoveItem = (item) => {
         dispatch(removeItem(item));
     }
-    console.log(items);
     return (
     <div>
         {items.map((item) => (
@@ -26,9 +38,11 @@ const CartItemsList = ({items}) =>{
                     </div>
                     <img src = { RES_IMG_URL + item.card.info.imageId} className="rounded-md shadow-lg shadow-black"/>
                 </div>
-
-            </div>
+            </div>   
         ))}
+            <div className="p-4 m-2 font-bold text-end">
+                <h1>Total - Cost = {calculateTotalCost(output)}</h1>
+            </div>
     </div>
     )
 };
